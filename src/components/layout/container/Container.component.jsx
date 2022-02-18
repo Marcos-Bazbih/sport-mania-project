@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import StyledContainer from "../../styles/layout-styles/Container.style"
+import StyledContainer from '../../styles/layout-styles/Container.style';
 import { DarkModeContext } from '../../../contexts/DarkModeContext';
 
 const Container = ({ children }) => {

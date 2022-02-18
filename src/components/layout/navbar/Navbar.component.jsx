@@ -9,6 +9,9 @@ const Navbar = () => {
         <StyledNavbar mode={mode}>
             <Link to='/'>Home</Link>
             <Link to='/shoes'>Shoes</Link>
+            <Link to='/shirts'>Shirts</Link>
+            <Link to='/pants'>Pants</Link>
+            <Link to='/equipment'>Equipment</Link>
         </StyledNavbar>
     )
 }

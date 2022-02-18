@@ -4,7 +4,10 @@ import globalReducers from "./reducers";
 const middlewares = [thunk];
 
 const store = createStore(globalReducers, {
-    items:[]
+    shoes:[],
+    shirts:[],
+    pants:[],
+    equipment:[]
 },
     compose(applyMiddleware(...middlewares))
 )

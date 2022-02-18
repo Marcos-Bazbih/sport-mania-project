@@ -5,8 +5,9 @@ const StyledContainer = styled.section`
     background: ${({mode})=> mode.background};
     color: ${({mode})=> mode.color};
     display:flex;
-    justify-content:center;
+    flex-direction:column;
     align-items:center;
+    overflow:auto;
 `
 
 export default StyledContainer;

@@ -1,11 +1,21 @@
-import React from 'react'
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import { GetAllShoes } from "../../../services/shoes-service.service";
+import { GetData } from "../../../redux/actions/itemsActions";
+import CardsContainer from "../../partials/CardsContainer.component";
 
-const Shoes = () => {
+const Shoes = ({ shoes, GetData }) => {
+    useEffect(() => {
+        GetAllShoes()
+            .then(res => GetData(res))
+    }, [])
+
     return (
-        <div>
+        <>
             <h1>Shoes</h1>
-        </div>
+            <CardsContainer items={shoes} />
+        </>
     )
 }
 
-export default Shoes
+export default connect((state) => ({ shoes: state.shoes }), { GetData })(Shoes);

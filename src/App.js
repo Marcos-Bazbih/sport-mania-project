@@ -5,13 +5,13 @@ import store from "./redux/store";
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <div className="App">
+    <div className="App">
+      <Provider store={store}>
         <DarkModeContextProvider>
           <AppRouter />
         </DarkModeContextProvider>
-      </div>
-    </Provider>
+      </Provider>
+    </div>
   );
 }
 
